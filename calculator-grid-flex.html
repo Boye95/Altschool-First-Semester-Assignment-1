@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home: About Me</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+  * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  body {
+    background-color: rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #container {
+    background-color: black;
+    width: 20rem;
+    height: 40rem;
+    border-radius: 1.5rem;
+  }
+
+  #screen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    height: 17rem;
+  }
+
+  .cal-input {
+    text-align: right;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+
+  .cal-result {
+    text-align: right;
+    width: 100%;
+  }
+
+  .operator {
+    color: rgb(202, 72, 72);
+  }
+
+  #cal-keys-section {
+    border-radius: 1.5rem;
+    background-color: #131212;
+    height: 23rem;
+  }
+
+  #keys {
+    color: aliceblue;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas:
+      "special-keys math-keys"
+      "numbers math-keys";
+    grid-template-columns: 5fr 1fr;
+    gap: 1rem;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  #special-keys,
+  #numbers-section,
+  #math-keys {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .special,
+  .number,
+  .math-key {
+    border: none;
+    background-color: #1a1919;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .math-key {
+    color: rgb(202, 72, 72);
+  }
+
+  .number {
+    color: white;
+  }
+
+  .special {
+    color: rgb(2, 255, 242);
+  }
+
+  #special-keys {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area: special-keys;
+  }
+
+  #numbers-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area: numbers;
+  }
+
+  .undo img {
+    filter: invert(100);
+  }
+
+  #math-keys {
+    grid-area: math-keys;
+  }
+
+</style>
+
+<body>
+  <div id="container">
+
+    <div id="screen">
+      <p class="cal-input">
+        <span class="firstOperand">20</span>
+        <span class="operator">+</span>
+        <span class="secondOperand">50</span>
+      </p>
+      <p class="cal-result">
+        70
+      </p>
+    </div>
+
+    <div id="cal-keys-section">
+
+      <div id="keys">
+        <div id="special-keys">
+          <button class="special clear">AC</button>
+          <button class="special plusminus">±</button>
+          <button class="special modulus">%</button>
+        </div>
+
+        <div id="numbers-section">
+          <button class="number seven">7</button>
+          <button class="number eight">8</button>
+          <button class="number nine">9</button>
+          <button class="number four">4</button>
+          <button class="number five">5</button>
+          <button class="number six">6</button>
+          <button class="number one">1</button>
+          <button class="number two">2</button>
+          <button class="number three">3</button>
+          <button class="number undo"><img src="arrow-rotate-left-solid.svg" alt="undo" style="height: 15px;"
+              class="undo-img"></button>
+          <button class="number zero">0</button>
+          <button class="number point">.</button>
+        </div>
+
+        <div id="math-keys">
+          <button class="math-key divide">÷</button>
+          <button class="math-key multiply">×</button>
+          <button class="math-key minus">-</button>
+          <button class="math-key plus">+</button>
+          <button class="math-key equal">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
